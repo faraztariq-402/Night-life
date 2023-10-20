@@ -1,0 +1,107 @@
+.firstBox{
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+  border: 1px solid gray;
+  padding: 1rem;
+}
+table {
+  border: 1px solid gray;
+  /* border-collapse: collapse; */
+  width: 100%;
+}
+
+th, td {
+  border: 1px solid #dddddd;
+ 
+}
+
+.secondContent{
+  display: flex;
+gap: 1rem;
+}
+.firstChild{
+  display: flex;
+  justify-content: space-between;
+}
+.thirdBox{
+  border: 1px solid gray;
+  padding: 1rem;
+}
+.dropdowns{
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 1rem;
+}
+   /* Style for the custom file input container */
+   .custom-file-input {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Style for the actual file input, making it transparent and cover the container */
+  .custom-file-input input[type="file"] {
+    position: absolute;
+    font-size: 100px;
+    right: 0;
+    top: 0;
+    opacity: 0;
+  }
+  
+  /* Style for the container's background and border */
+  .custom-file-input label {
+    background-color: gray;
+    color: #fff;
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+ 
+  hr{
+    border: 1;
+  }
+  p{
+    margin-bottom: 0 !important;
+    margin-top: 0 !important;
+  }
+  /* .image{
+    height:"1.5rem" !important;
+     width:"1rem" !important;
+  } */
+  /* Style for the upload icon (rightward-pointing arrow) */
+  .custom-file-input .icon-upload {
+    margin-right: 5px;
+  }
+
+  /* Style for the export (placeholder) text */
+  .custom-file-input .export-text {
+    color: #777;
+  }
+.secondBox select{
+  width: 100%;
+  padding: 0.4rem;
+  height: 2.5rem;
+  border-radius: 0.5rem;
+  /* outline: blue; */
+}
+select:active{
+  border: 2px solid blue;
+}
+.secondBox{
+  /* display: flex;
+  justify-content: space-around;
+  gap: 2rem; */
+  border: 1px solid gray;
+  padding: 1rem;
+}
+/* hr{
+  border: 1 !important;
+ 
+} */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

@@ -1,0 +1,127 @@
+body{
+
+    flex-shrink: 0;
+    background-color: #000000;
+    background-image: url("../../../../assets/img/Ellipse\ 1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    }
+    .verify{
+        color: white;
+        font-size: 24px;
+       
+    }
+    .first{
+        width: 55%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    img{
+        height: 25rem;
+    }
+    body::-webkit-scrollbar { 
+        display: none; 
+    }
+    .parent{
+        display: flex;
+        /* flex-direction: column; */
+        gap: 2rem;
+        align-items: center;
+    scroll-behavior: none;
+    }
+    .box{
+        padding: 0.5rem 1rem 1rem 1rem;
+        border-radius: 16px;
+    background: rgba(211, 211, 211, 0.10);
+    width: 257px;
+    backdrop-filter: blur(10px);
+    }
+    .inputs{
+        display: flex;
+        gap: 0.8rem;
+    }
+    .headingAndBox{
+         display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .second{
+        margin-left:8rem;
+       
+        gap: 1.5rem;
+    }
+    .box .para{
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+        font-size: 14px;
+        color: white;
+    }
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    input{
+        width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    background: #FFF;
+    /* margin-left: 26px; */
+    }
+    .para2{
+        font-size: 12px;
+        color: white;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+    }
+    button{
+        font-size: 14px;
+        width: 100%;
+        color: white;
+    height: 49px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    background: #1E89A0;
+    border: 1px solid #1E89A0;
+    margin-bottom: 1.8rem;
+    }
+    
+    @media screen and (max-width:750px) {
+        .second{
+            margin-left: 0rem;
+            margin-bottom: 3rem;
+        }
+        .first{
+            margin-top: 2rem;
+        }
+        .parent{
+            flex-direction: column;
+        }
+        .first img{
+            height: 20rem;
+        }
+    }
+    @media screen and (min-width:750px) {
+        .second{
+            margin-left: 0rem;
+            width: 45%;
+        }
+        .box{
+            width: 300px;
+                }
+                input{
+                  height: 50px;
+                  width: 50px;  
+                  
+                }.inputs{
+    gap: 1rem;
+                }
+        .parent{
+            flex-direction: row;
+            height: 100vh;
+        }
+    }
