@@ -82,40 +82,43 @@ $(function () {
           searchable: false
         },
         {
+            // Remove checkboxes
+            targets: 2,
+            orderable: false,
+            render: function (data, type, full, meta) {
+              var rowIndex = meta.row + 1; // Adding 1 to convert from 0-based to 1-based index
+              return 'T' + rowIndex;
+            },
+            searchable: false
+          },
+        {
           // Section (Customization)
           targets: 3,
-          responsivePriority: 5,
-          render: function (data, type, full, meta) {
-            return '<button class="btn btn-sm btn-primary" onclick="window.location.href=\'../../view.html\'">View</button>';
-
-          }
+            render: function (data, type, full, meta) {
+              // Generate a random price (e.g., between 10 and 100) and format it as a currency
+              var randomPrice = (Math.random() * 90 + 10).toFixed(2);
+              return '$' + randomPrice; // Assuming you want to format the price as a currency
+            }
         },
       
+       
+        {
+            // Status (Customization)
+            targets: 4,
+            render: function (data, type, full, meta) {
+              // Generate a random price (e.g., between 10 and 100) and format it as a currency
+              var randomPrice = (Math.random() * 90 + 10).toFixed(2);
+              return '$' + randomPrice; // Assuming you want to format the price as a currency
+            }
+          }, 
         {
           // Date (Customization)
-          targets: 4,
+          targets: 5,
           orderable: false,
           responsivePriority: 3,
           render: function (data, type, full, meta) {
             var randomDate = '10-2-23'; // Customize the date here
             return '<span>' + randomDate + '</span>';
-          }
-        },
-        {
-          // Status (Customization)
-          targets: 5,
-          render: function (data, type, full, meta) {
-            var stock = full['status'];
-            var statusToggle = stock === 'Active' ? 'on' : 'off'; // Toggle on and off based on 'Active' status
-            return (
-              '<label class="switch switch-primary switch-sm">' +
-              '<input type="checkbox" class="switch-input" ' + (statusToggle === 'on' ? 'checked' : '') + '>' +
-              '<span class="switch-toggle-slider">' +
-              '<span class="switch-' + statusToggle + '">' +
-              '</span>' +
-              '</span>' +
-              '</label>'
-            );
           }
         },
         {

@@ -52,9 +52,10 @@ $(function () {
         { data: 'id' },
         { data: 'id' },
         { data: 'product_name' }, // Product column
-        { data: 'section' }, // Section column
-        { data: 'date' }, // Date column
-        { data: 'status' }, // Status column
+        { data: 'salary' }, // Section column
+        { data: 'time' }, // Date column
+        { data: 'event' }, // Status column
+        { data: 'date' }, // Status column
         { data: '' } // Action column
       ],
       columnDefs: [
@@ -83,10 +84,19 @@ $(function () {
         },
         {
           // Section (Customization)
+          targets: 2,
+          responsivePriority: 5,
+          render: function (data, type, full, meta) {
+            return 'Faraz';
+
+          }
+        },
+        {
+          // Section (Customization)
           targets: 3,
           responsivePriority: 5,
           render: function (data, type, full, meta) {
-            return '<button class="btn btn-sm btn-primary" onclick="window.location.href=\'../../view.html\'">View</button>';
+            return "50000";
 
           }
         },
@@ -97,38 +107,40 @@ $(function () {
           orderable: false,
           responsivePriority: 3,
           render: function (data, type, full, meta) {
-            var randomDate = '10-2-23'; // Customize the date here
+            return new Date().getTime();
+          }
+        },
+        {
+          // Date (Customization)
+          targets: 5,
+          orderable: false,
+          responsivePriority: 3,
+          render: function (data, type, full, meta) {
+            return "Event";
+          }
+        },
+        {
+          // Date (Customization)
+          targets: 6,
+          orderable: false,
+          responsivePriority: 3,
+          render: function (data, type, full, meta) {
+            var randomDate = '10-2-25'; // Customize the date here
             return '<span>' + randomDate + '</span>';
           }
         },
-        {
-          // Status (Customization)
-          targets: 5,
-          render: function (data, type, full, meta) {
-            var stock = full['status'];
-            var statusToggle = stock === 'Active' ? 'on' : 'off'; // Toggle on and off based on 'Active' status
-            return (
-              '<label class="switch switch-primary switch-sm">' +
-              '<input type="checkbox" class="switch-input" ' + (statusToggle === 'on' ? 'checked' : '') + '>' +
-              '<span class="switch-toggle-slider">' +
-              '<span class="switch-' + statusToggle + '">' +
-              '</span>' +
-              '</span>' +
-              '</label>'
-            );
-          }
-        },
+       
         {
           // Actions (Customization)
-          targets: 6,
+          targets: 7,
           title: 'Actions',
           searchable: false,
           orderable: false,
           render: function (data, type, full, meta) {
             return (
               '<div class="d-inline-block text-nowrap">' +
-              '<i class="ti ti-edit"></i>' + // Edit icon
-              '<i class="ti ti-trash"></i>' + // Delete icon
+              '<button>Accept</button>' + // Edit icon
+              '<button>Reject</button>' + // Delete icon
               '</div>'
             );
           }

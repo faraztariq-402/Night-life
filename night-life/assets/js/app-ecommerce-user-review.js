@@ -42,7 +42,9 @@ $(function () {
       0: { title: 'Out of Stock' },
       1: { title: 'In Stock' }
     };
-
+let user = document.getElementById("user")
+let promoter = document.getElementById("promoter")
+let dj = document.getElementById("dj")
   // E-commerce Products datatable
 
   if (dt_product_table.length) {
@@ -52,9 +54,9 @@ $(function () {
         { data: 'id' },
         { data: 'id' },
         { data: 'product_name' }, // Product column
-        { data: 'section' }, // Section column
-        { data: 'date' }, // Date column
-        { data: 'status' }, // Status column
+        { data: 'review' }, // Section column
+        { data: 'rate' }, // Date column
+       
         { data: '' } // Action column
       ],
       columnDefs: [
@@ -83,10 +85,20 @@ $(function () {
         },
         {
           // Section (Customization)
+          targets: 2,
+          responsivePriority: 5,
+          render: function (data, type, full, meta) {
+            return "Faraz"
+          
+
+          }
+        },
+        {
+          // Section (Customization)
           targets: 3,
           responsivePriority: 5,
           render: function (data, type, full, meta) {
-            return '<button class="btn btn-sm btn-primary" onclick="window.location.href=\'../../view.html\'">View</button>';
+            return "It was good though";
 
           }
         },
@@ -97,38 +109,23 @@ $(function () {
           orderable: false,
           responsivePriority: 3,
           render: function (data, type, full, meta) {
-            var randomDate = '10-2-23'; // Customize the date here
-            return '<span>' + randomDate + '</span>';
+            return "⭐⭐⭐";
           }
         },
-        {
-          // Status (Customization)
-          targets: 5,
-          render: function (data, type, full, meta) {
-            var stock = full['status'];
-            var statusToggle = stock === 'Active' ? 'on' : 'off'; // Toggle on and off based on 'Active' status
-            return (
-              '<label class="switch switch-primary switch-sm">' +
-              '<input type="checkbox" class="switch-input" ' + (statusToggle === 'on' ? 'checked' : '') + '>' +
-              '<span class="switch-toggle-slider">' +
-              '<span class="switch-' + statusToggle + '">' +
-              '</span>' +
-              '</span>' +
-              '</label>'
-            );
-          }
-        },
+        
+        
+       
         {
           // Actions (Customization)
-          targets: 6,
+          targets: 5,
           title: 'Actions',
           searchable: false,
           orderable: false,
           render: function (data, type, full, meta) {
             return (
               '<div class="d-inline-block text-nowrap">' +
-              '<i class="ti ti-edit"></i>' + // Edit icon
-              '<i class="ti ti-trash"></i>' + // Delete icon
+              '<button style="width: 2rem;">X</button>' + // Edit icon
+              '<button >Hide</button>' + // Delete icon
               '</div>'
             );
           }
