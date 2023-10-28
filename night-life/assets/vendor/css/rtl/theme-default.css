@@ -293,8 +293,7 @@ button.list-group-item-primary.active {
 .btn-primary {
     border-radius: 8px;
     background: #1E89A0;
-    width: 120px;
-    height: 2rem;
+    
     flex-shrink: 0;
     box-shadow: unset;
     color: #ffff;

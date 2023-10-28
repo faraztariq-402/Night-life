@@ -42,9 +42,7 @@ $(function () {
       0: { title: 'Out of Stock' },
       1: { title: 'In Stock' }
     };
-let user = document.getElementById("user")
-let promoter = document.getElementById("promoter")
-let dj = document.getElementById("dj")
+
   // E-commerce Products datatable
 
   if (dt_product_table.length) {
@@ -54,9 +52,9 @@ let dj = document.getElementById("dj")
         { data: 'id' },
         { data: 'id' },
         { data: 'product_name' }, // Product column
-        { data: 'review' }, // Section column
-        { data: 'rate' }, // Date column
-       
+        { data: 'section' }, // Section column
+        { data: 'Date' }, // Date column
+        { data: 'status' }, // Status column
         { data: '' } // Action column
       ],
       columnDefs: [
@@ -85,47 +83,58 @@ let dj = document.getElementById("dj")
         },
         {
           // Section (Customization)
-          targets: 2,
-          responsivePriority: 5,
-          render: function (data, type, full, meta) {
-            return "Faraz"
-          
-
-          }
-        },
-        {
-          // Section (Customization)
           targets: 3,
           responsivePriority: 5,
           render: function (data, type, full, meta) {
-            return "It was good though";
+            return '<button class="btn btn-sm btn-primary" onclick="window.location.href=\'../../view.html\'">View</button>';
 
           }
         },
-      
         {
           // Date (Customization)
           targets: 4,
           orderable: false,
           responsivePriority: 3,
+          data: null, // Set data to null since there is no actual date property
           render: function (data, type, full, meta) {
-            return "⭐⭐⭐";
+            var randomDate = '10-2-23'; // Customize the date here
+            console.warn("Warning: 'date' property is not available in data source for column 4.");
+            return '<span class="your-custom-class">' + randomDate + '</span>';
+          },
+          createdCell: function (td, cellData, rowData, row, col) {
+            if (col === 4) {
+              td.className = 'dateTd'; // Add your custom class here
+            }
           }
         },
-        
-        
-       
+        {
+          // Status (Customization)
+          targets: 5,
+          render: function (data, type, full, meta) {
+            var stock = full['status'];
+            var statusToggle = stock === 'Active' ? 'on' : 'off'; // Toggle on and off based on 'Active' status
+            return (
+              '<label class="switch switch-primary switch-sm">' +
+              '<input type="checkbox" class="switch-input" ' + (statusToggle === 'on' ? 'checked' : '') + '>' +
+              '<span class="switch-toggle-slider">' +
+              '<span class="switch-' + statusToggle + '">' +
+              '</span>' +
+              '</span>' +
+              '</label>'
+            );
+          }
+        },
         {
           // Actions (Customization)
-          targets: 5,
+          targets: 6,
           title: 'Actions',
           searchable: false,
           orderable: false,
           render: function (data, type, full, meta) {
             return (
               '<div class="d-inline-block text-nowrap">' +
-              '<button style="width: 2rem;">X</button>' + // Edit icon
-              '<button >Hide</button>' + // Delete icon
+              '<i class="ti ti-edit"></i>' + // Edit icon
+              '<i class="ti ti-trash"></i>' + // Delete icon
               '</div>'
             );
           }
@@ -133,37 +142,7 @@ let dj = document.getElementById("dj")
       ]
     });
   }
-  function updateColumns(name, review, rate) {
-    dt_products.column(2).nodes().each(function (node, index, dt) {
-      $(node).html(name);
-    });
 
-    dt_products.column(3).nodes().each(function (node, index, dt) {
-      $(node).html(review);
-    });
-
-    dt_products.column(4).nodes().each(function (node, index, dt) {
-      $(node).html(rate);
-    });
-
-    dt_products.column(5).nodes().each(function (node, index, dt) {
-      // You can update the Actions column content here if needed
-      $(node).html('<button>X</button><button>Hide</button>');
-    });
-  }
-
-  // Listen for tab change events and update the columns
-  $('#homeTab').on('click', function () {
-    updateColumns('Faraz', 'It was Amazing, excellent experience', '⭐⭐⭐');
-  });
-
-  $('#profileTab').on('click', function () {
-    updateColumns('Saad', 'It was better', '⭐⭐');
-  });
-
-  $('#messagesTab').on('click', function () {
-    updateColumns('Ali', 'I would give 4 stars', '⭐⭐⭐⭐');
-  });
   // Delete Record
   $('.datatables-products tbody').on('click', '.delete-record', function () {
     dt_products.row($(this).parents('tr')).remove().draw();

@@ -1,16 +1,29 @@
 <!DOCTYPE html>
 
 <html lang="en" class="light-style layout-navbar-fixed layout-menu-fixed" dir="ltr" data-theme="theme-default"
-  data-assets-path="/assets/" data-template="vertical-menu-template-no-customizer">
+  data-assets-path="assets/" data-template="vertical-menu-template-no-customizer">
 
 <head>
   <meta charset="utf-8" />
   <meta name="viewport"
     content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
-  <title>Jobs Request Of DJ And Promoters</title>
+  <title>Product List - eCommerce | Vuexy - Bootstrap Admin Template</title>
   <style>
-    button {
+    .tabs button {
+      height: 2rem;
+      background-color: #1E89A0;
+      color: white;
+      /* display: flex; */
+      width: 5rem;
+      border-radius: 8px !important;
+      margin: 0;
+    }
+.logo{
+    height:5rem;
+    width: 7rem;
+}
+    .table button {
       height: 2rem;
       margin: 0.3rem !important;
       background-color: #1E89A0;
@@ -23,7 +36,7 @@
   <meta name="description" content="" />
 
   <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="/assets/img/favicon/favicon.ico" />
+  <link rel="icon" type="image/x-icon" href="assets/img/favicon/favicon.ico" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -33,32 +46,32 @@
     rel="stylesheet" />
 
   <!-- Icons -->
-  <link rel="stylesheet" href="/assets/vendor/fonts/fontawesome.css" />
-  <link rel="stylesheet" href="/assets/vendor/fonts/tabler-icons.css" />
-  <link rel="stylesheet" href="/assets/vendor/fonts/flag-icons.css" />
+  <link rel="stylesheet" href="assets/vendor/fonts/fontawesome.css" />
+  <link rel="stylesheet" href="assets/vendor/fonts/tabler-icons.css" />
+  <link rel="stylesheet" href="assets/vendor/fonts/flag-icons.css" />
 
   <!-- Core CSS -->
-  <link rel="stylesheet" href="/assets/vendor/css/rtl/core.css" />
-  <link rel="stylesheet" href="/assets/vendor/css/rtl/theme-default.css" />
-  <link rel="stylesheet" href="/assets/css/demo.css" />
-  <link rel="stylesheet" href="/assets/vendor/css/rtl/productlist.css" />
+  <link rel="stylesheet" href="assets/vendor/css/rtl/core.css" />
+  <link rel="stylesheet" href="assets/vendor/css/rtl/theme-default.css" />
+  <link rel="stylesheet" href="assets/css/demo.css" />
+  <link rel="stylesheet" href="assets/vendor/css/rtl/productlist.css" />
 
   <!-- Vendors CSS -->
-  <link rel="stylesheet" href="/assets/vendor/libs/node-waves/node-waves.css" />
-  <link rel="stylesheet" href="/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
-  <link rel="stylesheet" href="/assets/vendor/libs/typeahead-js/typeahead.css" />
-  <link rel="stylesheet" href="/assets/vendor/libs/datatables-bs5/datatables.bootstrap5.css" />
-  <link rel="stylesheet" href="/assets/vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.css" />
-  <link rel="stylesheet" href="/assets/vendor/libs/datatables-buttons-bs5/buttons.bootstrap5.css" />
-  <link rel="stylesheet" href="/assets/vendor/libs/select2/select2.css" />
+  <link rel="stylesheet" href="assets/vendor/libs/node-waves/node-waves.css" />
+  <link rel="stylesheet" href="assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
+  <link rel="stylesheet" href="assets/vendor/libs/typeahead-js/typeahead.css" />
+  <link rel="stylesheet" href="assets/vendor/libs/datatables-bs5/datatables.bootstrap5.css" />
+  <link rel="stylesheet" href="assets/vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.css" />
+  <link rel="stylesheet" href="assets/vendor/libs/datatables-buttons-bs5/buttons.bootstrap5.css" />
+  <link rel="stylesheet" href="assets/vendor/libs/select2/select2.css" />
 
   <!-- Page CSS -->
 
   <!-- Helpers -->
-  <script src="/assets/vendor/js/helpers.js"></script>
+  <script src="assets/vendor/js/helpers.js"></script>
   <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
   <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
-  <script src="/assets/js/config.js"></script>
+  <script src="assets/js/config.js"></script>
 </head>
 
 <body>
@@ -67,174 +80,173 @@
     <div class="layout-container">
       <!-- Menu -->
 
+      <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
+        <div class="app-brand demo">
+          <a href="index.html" class="app-brand-link">
+          
+    <img class="nightlifeLogo" src="/assets/img/NIGHTLIFE.png" alt="">            </a>
     
-   <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
-    <div class="app-brand demo">
-      <a href="index.html" class="app-brand-link">
-      
-<img class="nightlifeLogo" src="/assets/img/NIGHTLIFE.png" alt="">            </a>
-
-      <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto">
-        <i class="ti menu-toggle-icon d-none d-xl-block ti-sm align-middle"></i>
-        <i class="ti ti-x d-block d-xl-none ti-sm align-middle"></i>
-      </a>
-    </div>
-
-    <div class="menu-inner-shadow"></div>
-
-    <ul class="menu-inner py-1">
-      <!-- Dashboards -->
-      <li class="menu-item" >
-        <a href="index.html" class="menu-link">
+          <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto">
+            <i class="ti menu-toggle-icon d-none d-xl-block ti-sm align-middle"></i>
+            <i class="ti ti-x d-block d-xl-none ti-sm align-middle"></i>
+          </a>
+        </div>
+    
+        <div class="menu-inner-shadow"></div>
+    
+        <ul class="menu-inner py-1">
+          <!-- Dashboards -->
+          <li class="menu-item" >
+            <a href="index.html" class="menu-link">
+              <i class="menu-icon tf-icons ti ti-smart-home"></i>
+              <div data-i18n="Dashboard">Dashboard</div>
+              <!-- <div class="badge bg-primary rounded-pill ms-auto">3</div> -->
+            </a>
+            
+          </li>
+    
+     
+          <li class="menu-item">
+            <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons ti ti-building-factory-2"></i>
+                <div data-i18n="Menu Management">Menu Management</div>
+            </a>
+            <ul class="menu-sub">
+                <li class="menu-item ">
+                    <a href="app-ecommerce-product-add.html" class="menu-link">
+                        <div data-i18n="Add Product">Add Product</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="product-list.html" class="menu-link">
+                        <div data-i18n="Product list">Product list</div>
+                    </a>
+                </li>
+            </ul>
+        </li>
+          <li class="menu-item ">
+            <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons ti ti-building-factory-2"></i>
+                <div data-i18n="Bidding Management">Bidding Management</div>
+            </a>
+            <ul class="menu-sub">
+                <li class="menu-item">
+                    <a href="/create-layout.html" class="menu-link">
+                        <div data-i18n="Create Layout">Create Layout</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="saved-layout.html" class="menu-link">
+                        <div data-i18n="Saved Layout">Saved Layout</div>
+                    </a>
+                </li>
+            </ul>
+        </li>
+            
+          <li class="menu-item active open">
+            <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons ti ti-building-factory-2"></i>
+                <div data-i18n="Media">Media</div>
+            </a>
+            <ul class="menu-sub">
+                <li class="menu-item">
+                    <a href="upload-file.html" class="menu-link">
+                        <div data-i18n="Upload Media">Upload Media</div>
+                    </a>
+                </li>
+                <li class="menu-item active">
+                    <a href="gallery.html" class="menu-link">
+                        <div data-i18n="Gallery">Gallery</div>
+                    </a>
+                </li>
+            </ul>
+        </li>
+            
+         
+        <li class="menu-item">
+          <a href="userreview.html" class="menu-link">
+            <i class="menu-icon tf-icons ti ti-smart-home"></i>
+            <div data-i18n="Reviews">Reviews</div>
+            <!-- <div class="badge bg-primary rounded-pill ms-auto">3</div> -->
+          </a>
+          
+        </li>
+             
+        <li class="menu-item ">
+          <a href="javascript:void(0);" class="menu-link menu-toggle">
+              <i class="menu-icon tf-icons ti ti-building-factory-2"></i>
+              <div data-i18n="Jobs">Jobs</div>
+          </a>
+          <ul class="menu-sub">
+              <li class="menu-item">
+                  <a href="viewjob.html" class="menu-link">
+                      <div data-i18n="View Job">View Job</div>
+                  </a>
+              </li>
+              <li class="menu-item">
+                  <a href="jobsrequest.html" class="menu-link">
+                      <div data-i18n="Request Detail Of Dj & Promoter">Request Detail Of Dj & Promoter</div>
+                  </a>
+              </li>
+              <li class="menu-item">
+                <a href="booking-details.html" class="menu-link">
+                    <div data-i18n="Booking Details">Booking Details</div>
+                </a>
+            </li>
+          </ul>
+      </li>
+        <li class="menu-item">
+          <a href="javascript:void(0);" class="menu-link menu-toggle">
+              <i class="menu-icon tf-icons ti ti-building-factory-2"></i>
+              <div data-i18n="Setting">Setting</div>
+          </a>
+          <ul class="menu-sub">
+              <li class="menu-item">
+                  <a href="profile_setting.html" class="menu-link">
+                      <div data-i18n="Profile Setting">Profile Setting</div>
+                  </a>
+              </li>
+              <li class="menu-item">
+                  <a href="password-change.html" class="menu-link">
+                      <div data-i18n="Password">Password</div>
+                  </a>
+              </li>
+              <li class="menu-item">
+                <a href="/payment-setting.html" class="menu-link">
+                    <div data-i18n="Payment Setting">Payment Setting</div>
+                </a>
+            </li>
+          </ul>
+      </li>
+           
+      <li class="menu-item">
+        <a href="javascript:void(0);" class="menu-link ">
           <i class="menu-icon tf-icons ti ti-smart-home"></i>
-          <div data-i18n="Dashboard">Dashboard</div>
+          <div data-i18n="Logout">Logout</div>
           <!-- <div class="badge bg-primary rounded-pill ms-auto">3</div> -->
         </a>
         
       </li>
-
- 
-      <li class="menu-item">
-        <a href="javascript:void(0);" class="menu-link menu-toggle">
-            <i class="menu-icon tf-icons ti ti-building-factory-2"></i>
-            <div data-i18n="Menu Management">Menu Management</div>
-        </a>
-        <ul class="menu-sub">
-            <li class="menu-item">
-                <a href="app-ecommerce-product-add.html" class="menu-link">
-                    <div data-i18n="Add Product">Add Product</div>
-                </a>
-            </li>
-            <li class="menu-item">
-                <a href="product-list.html" class="menu-link">
-                    <div data-i18n="Product list">Product list</div>
-                </a>
-            </li>
-        </ul>
-    </li>
-      <li class="menu-item">
-        <a href="javascript:void(0);" class="menu-link menu-toggle">
-            <i class="menu-icon tf-icons ti ti-building-factory-2"></i>
-            <div data-i18n="Bidding Management">Bidding Management</div>
-        </a>
-        <ul class="menu-sub">
-            <li class="menu-item">
-                <a href="/create-layout.html" class="menu-link">
-                    <div data-i18n="Create Layout">Create Layout</div>
-                </a>
-            </li>
-            <li class="menu-item">
-                <a href="saved-layout.html" class="menu-link">
-                    <div data-i18n="Saved Layout">Saved Layout</div>
-                </a>
-            </li>
-        </ul>
-    </li>
-        
-      <li class="menu-item">
-        <a href="javascript:void(0);" class="menu-link menu-toggle">
-            <i class="menu-icon tf-icons ti ti-building-factory-2"></i>
-            <div data-i18n="Media">Media</div>
-        </a>
-        <ul class="menu-sub">
-            <li class="menu-item">
-                <a href="upload-file.html" class="menu-link">
-                    <div data-i18n="Upload Media">Upload Media</div>
-                </a>
-            </li>
-            <li class="menu-item">
-                <a href="gallery.html" class="menu-link">
-                    <div data-i18n="Gallery">Gallery</div>
-                </a>
-            </li>
-        </ul>
-    </li>
-        
-     
-    <li class="menu-item">
-      <a href="userreview.html" class="menu-link">
-        <i class="menu-icon tf-icons ti ti-smart-home"></i>
-        <div data-i18n="Reviews">Reviews</div>
-        <!-- <div class="badge bg-primary rounded-pill ms-auto">3</div> -->
-      </a>
       
-    </li>
-         
-    <li class="menu-item active open">
-      <a href="javascript:void(0);" class="menu-link menu-toggle">
-          <i class="menu-icon tf-icons ti ti-building-factory-2"></i>
-          <div data-i18n="Jobs">Jobs</div>
-      </a>
-      <ul class="menu-sub">
-          <li class="menu-item">
-              <a href="viewjob.html" class="menu-link">
-                  <div data-i18n="View Job">View Job</div>
-              </a>
-          </li>
-          <li class="menu-item active">
-              <a href="jobsrequest.html" class="menu-link">
-                  <div data-i18n="Request Detail Of Dj & Promoter">Request Detail Of Dj & Promoter</div>
-              </a>
-          </li>
-          <li class="menu-item">
-            <a href="booking-details.html" class="menu-link">
-                <div data-i18n="Booking Details">Booking Details</div>
-            </a>
-        </li>
-      </ul>
-  </li>
-    <li class="menu-item">
-      <a href="javascript:void(0);" class="menu-link menu-toggle">
-          <i class="menu-icon tf-icons ti ti-building-factory-2"></i>
-          <div data-i18n="Setting">Setting</div>
-      </a>
-      <ul class="menu-sub">
-          <li class="menu-item">
-              <a href="profile_setting.html" class="menu-link">
-                  <div data-i18n="Profile Setting">Profile Setting</div>
-              </a>
-          </li>
-          <li class="menu-item">
-              <a href="password-change.html" class="menu-link">
-                  <div data-i18n="Password">Password</div>
-              </a>
-          </li>
-          <li class="menu-item">
-            <a href="/payment-setting.html" class="menu-link">
-                <div data-i18n="Payment Setting">Payment Setting</div>
-            </a>
-        </li>
-      </ul>
-  </li>
-       
-  <li class="menu-item">
-    <a href="javascript:void(0);" class="menu-link ">
-      <i class="menu-icon tf-icons ti ti-smart-home"></i>
-      <div data-i18n="Logout">Logout</div>
-      <!-- <div class="badge bg-primary rounded-pill ms-auto">3</div> -->
-    </a>
-    
-  </li>
-  
-  
-    
-  
- 
-
-  
-
-
-
-
-
-   
-
-  
-
-  
+      
+        
+      
      
-    </ul>
-  </aside>
+    
+      
+    
+    
+    
+    
+    
+       
+    
+      
+    
+      
+         
+        </ul>
+      </aside>
       <!-- / Menu -->
 
       <!-- Layout container -->
@@ -398,7 +410,7 @@
                         <div class="d-flex">
                           <div class="flex-shrink-0 me-3">
                             <div class="avatar">
-                              <img src="/assets/img/avatars/1.png" alt class="h-auto rounded-circle" />
+                              <img src="assets/img/avatars/1.png" alt class="h-auto rounded-circle" />
                             </div>
                           </div>
                           <div class="flex-grow-1">
@@ -438,7 +450,7 @@
                         <div class="d-flex">
                           <div class="flex-shrink-0 me-3">
                             <div class="avatar">
-                              <img src="/assets/img/avatars/2.png" alt class="h-auto rounded-circle" />
+                              <img src="assets/img/avatars/2.png" alt class="h-auto rounded-circle" />
                             </div>
                           </div>
                           <div class="flex-grow-1">
@@ -479,7 +491,7 @@
                         <div class="d-flex">
                           <div class="flex-shrink-0 me-3">
                             <div class="avatar">
-                              <img src="/assets/img/avatars/9.png" alt class="h-auto rounded-circle" />
+                              <img src="assets/img/avatars/9.png" alt class="h-auto rounded-circle" />
                             </div>
                           </div>
                           <div class="flex-grow-1">
@@ -520,7 +532,7 @@
                         <div class="d-flex">
                           <div class="flex-shrink-0 me-3">
                             <div class="avatar">
-                              <img src="/assets/img/avatars/5.png" alt class="h-auto rounded-circle" />
+                              <img src="assets/img/avatars/5.png" alt class="h-auto rounded-circle" />
                             </div>
                           </div>
                           <div class="flex-grow-1">
@@ -540,7 +552,7 @@
                         <div class="d-flex">
                           <div class="flex-shrink-0 me-3">
                             <div class="avatar">
-                              <img src="/assets/img/avatars/6.png" alt class="h-auto rounded-circle" />
+                              <img src="assets/img/avatars/6.png" alt class="h-auto rounded-circle" />
                             </div>
                           </div>
                           <div class="flex-grow-1">
@@ -593,7 +605,7 @@
               <li class="nav-item navbar-dropdown dropdown-user dropdown">
                 <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
                   <div class="avatar avatar-online">
-                    <img src="/assets/img/avatars/1.png" alt class="h-auto rounded-circle" />
+                    <img src="assets/img/avatars/1.png" alt class="h-auto rounded-circle" />
                   </div>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end">
@@ -602,7 +614,7 @@
                       <div class="d-flex">
                         <div class="flex-shrink-0 me-3">
                           <div class="avatar avatar-online">
-                            <img src="/assets/img/avatars/1.png" alt class="h-auto rounded-circle" />
+                            <img src="assets/img/avatars/1.png" alt class="h-auto rounded-circle" />
                           </div>
                         </div>
                         <div class="flex-grow-1">
@@ -682,76 +694,72 @@
           <!-- Content -->
 
           <div class="container-xxl flex-grow-1 container-p-y">
-            <h4 class="py-3 mb-4">Jobs Request</h4>
+            <h4 class="py-3 mb-4">
+              <h4>Gallery</h4>
 
-            <!-- Product List Widget -->
+              <!-- Product List Widget -->
+
+              <div class="card mb-4">
+
+              
+              </div>
+
+              <!-- Product List Table -->
+              <div class="card">
+                <div class="card-header">
+                  <div class="col-xl-6 rounded">
+                    <div class="nav-align-top nav-tabs-shadow mb-4">
+                      <ul class="nav nav-tabs overflow-hidden rounded" role="tablist">
+                        <li class="nav-item">
+                          <button type="button" class="nav-link active" role="tab" data-bs-toggle="tab"
+                            data-bs-target="#navs-top-home" aria-controls="navs-top-home" aria-selected="true"
+                            id="homeTab">
+                            Image
+                          </button>
+                        </li>
+                        <li class="nav-item">
+                          <button type of="button" class="nav-link" role="tab" data-bs-toggle="tab"
+                            data-bs-target="#navs-top-profile" aria-controls="navs-top-profile" aria-selected="false"
+                            id="profileTab">
+                        Video
+                          </button>
+                        </li>
+                        <li class="nav-item">
+                          <button type="button" class="nav-link" role="tab" data-bs-toggle="tab"
+                            data-bs-target="#navs-top-messages" aria-controls="navs-top-messages" aria-selected="false"
+                            id="messagesTab">
+                            Audio
+                          </button>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+               
+                </div>
+
+                <div class="card-datatable table-responsive">
+                  <table class="datatables-products table">
+                    <thead class="border-top">
+                      <tr>
+                        <th></th>
+                        <th></th>
+                        <th id="columnHeader">Image</th>
+                        <th>Caption</th>
+                        <th>Date</th>
+                        <th>Action</th>
 
 
-            <!-- Product List Table -->
-            <div class="card">
-              <div class="card-header">
-                <h5 class="card-title mb-0">Filter</h5>
-                <div class="d-flex justify-content-between align-items-center row py-3 gap-3 gap-md-0">
-                  <div class="col-md-4 product_status"></div>
-                  <div class="col-md-4 product_category"></div>
-                  <div class="col-md-4 product_stock"></div>
+                      </tr>
+                    </thead>
+                  </table>
                 </div>
               </div>
-              <div class="card-datatable table-responsive">
-                <table class="datatables-products table">
-                  <thead class="border-top">
-                    <tr>
-                      <th></th>
-                      <th></th>
-                      <th>Name</th>
-                      <th>Salary</th>
-                      <th>Time</th>
-                      <th>Event</th>
-                      <th>Date</th>
-                      <th>Request</th>
-
-                    </tr>
-                  </thead>
-                </table>
-              </div>
-            </div>
           </div>
-          <!-- / Content -->
-
-          <!-- Footer -->
-          <footer class="content-footer footer bg-footer-theme">
-            <div class="container-xxl">
-              <div
-                class="footer-container d-flex align-items-center justify-content-between py-2 flex-md-row flex-column">
-                <div>
-                  ©
-                  <script>
-                    document.write(new Date().getFullYear());
-                  </script>
-                  , made with ❤️ by <a href="https://pixinvent.com" target="_blank" class="fw-medium">Pixinvent</a>
-                </div>
-                <div class="d-none d-lg-inline-block">
-                  <a href="https://themeforest.net/licenses/standard" class="footer-link me-4"
-                    target="_blank">License</a>
-                  <a href="https://1.envato.market/pixinvent_portfolio" target="_blank" class="footer-link me-4">More
-                    Themes</a>
-
-                  <a href="https://demos.pixinvent.com/vuexy-html-admin-template/documentation/" target="_blank"
-                    class="footer-link me-4">Documentation</a>
-
-                  <a href="https://pixinvent.ticksy.com/" target="_blank"
-                    class="footer-link d-none d-sm-inline-block">Support</a>
-                </div>
-              </div>
-            </div>
-          </footer>
-          <!-- / Footer -->
+        
 
           <div class="content-backdrop fade"></div>
         </div>
-        <!-- Content wrapper -->
       </div>
-      <!-- / Layout page -->
     </div>
 
     <!-- Overlay -->
@@ -765,27 +773,49 @@
   <!-- Core JS -->
   <!-- build:js assets/vendor/js/core.js -->
 
-  <script src="/assets/vendor/libs/jquery/jquery.js"></script>
-  <script src="/assets/vendor/libs/popper/popper.js"></script>
-  <script src="/assets/vendor/js/bootstrap.js"></script>
-  <script src="/assets/vendor/libs/node-waves/node-waves.js"></script>
-  <script src="/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
-  <script src="/assets/vendor/libs/hammer/hammer.js"></script>
-  <script src="/assets/vendor/libs/i18n/i18n.js"></script>
-  <script src="/assets/vendor/libs/typeahead-js/typeahead.js"></script>
-  <script src="/assets/vendor/js/menu.js"></script>
+  <script src="assets/vendor/libs/jquery/jquery.js"></script>
+  <script src="assets/vendor/libs/popper/popper.js"></script>
+  <script src="assets/vendor/js/bootstrap.js"></script>
+  <script src="assets/vendor/libs/node-waves/node-waves.js"></script>
+  <script src="assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+  <script src="assets/vendor/libs/hammer/hammer.js"></script>
+  <script src="assets/vendor/libs/i18n/i18n.js"></script>
+  <script src="assets/vendor/libs/typeahead-js/typeahead.js"></script>
+  <script src="assets/vendor/js/menu.js"></script>
 
-  <!-- endbuild -->
 
   <!-- Vendors JS -->
-  <script src="/assets/vendor/libs/datatables-bs5/datatables-bootstrap5.js"></script>
-  <script src="/assets/vendor/libs/select2/select2.js"></script>
+  <script src="assets/vendor/libs/datatables-bs5/datatables-bootstrap5.js"></script>
+  <script src="assets/vendor/libs/select2/select2.js"></script>
+  <script>
+    const tabs = document.querySelectorAll('.nav-link');
+    const columnHeader = document.getElementById('columnHeader');
 
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            const tabText = tab.textContent.trim();
+
+            switch (tabText) {
+                case 'Image':
+                    columnHeader.textContent = 'Image';
+                    break;
+                case 'Video':
+                    columnHeader.textContent = 'Video';
+                    break;
+                case 'Audio':
+                    columnHeader.textContent = 'Audio';
+                    break;
+                default:
+                    columnHeader.textContent = 'Image';
+            }
+        });
+    });
+</script>
   <!-- Main JS -->
-  <script src="/assets/js/main.js"></script>
+  <script src="assets/js/main.js"></script>
 
   <!-- Page JS -->
-  <script src="/assets/js/app-ecommerce-jobs-request.js"></script>
+  <script src="assets/js/app-ecommerce-gallery.js"></script>
 </body>
 
 </html>

@@ -51,36 +51,10 @@ $(function () {
       columns: [
         { data: 'id' },
         { data: 'id' },
-        { data: '', // Product column
-          render: function (data, type, full, meta) {
-            return 'Drink';
-          }
-        },
-        { data: '', // Quantity column
-          render: function (data, type, full, meta) {
-            return Math.floor(Math.random() * 10)
-          }
-        },
-        { data: '', // Total column
-          render: function (data, type, full, meta) {
-            return `$${Math.floor(Math.random() * 200)}`;
-          }
-        },
-        { data: '', // Customer column
-          render: function (data, type, full, meta) {
-            return 'Voolka';
-          }
-        },
-        { data: '', // Date column
-          render: function (data, type, full, meta) {
-            return '20-05-2023';
-          }
-        },
-        { data: '', // Action column
-          render: function (data, type, full, meta) {
-            return '<button class="btn btn-danger">X</button>';
-          }
-        }
+        { data: 'club_name' }, // Product column
+        { data: 'description' }, // Section column
+        { data: 'amount' }, // Date column
+        { data: 'date' }, // Status column
       ],
       columnDefs: [
         {
@@ -102,10 +76,54 @@ $(function () {
             selectAllRender: '<input type="checkbox" class="form-check-input">'
           },
           render: function () {
-            return '<input type="checkbox" class="dt-checkboxes form-check-input">';
+            return '<input type="checkbox" class="dt-checkboxes form-check-input" >';
           },
           searchable: false
-        }
+        },
+        {
+          // For Checkboxes
+          targets: 2,
+          orderable: false,
+       
+          render: function () {
+            return 'Dj Event';
+          },
+          searchable: false
+        },
+        {
+          // Section (Customization)
+          targets: 3,
+          responsivePriority: 5,
+          render: function (data, type, full, meta) {
+            return '$359';
+
+          }
+        },
+      
+        {
+          // Date (Customization)
+          targets: 4,
+          orderable: false,
+          responsivePriority: 3,
+          render: function (data, type, full, meta) {
+            return '$40';
+          }
+        },
+       
+        {
+          // Date (Customization)
+          targets: 5,
+          orderable: false,
+          responsivePriority: 3,
+          render: function (data, type, full, meta) {
+            return '<div class="d-inline-block text-nowrap">' +
+            '<i class="ti ti-edit"></i>' + // Edit icon
+            '<i class="ti ti-trash"></i>' + // Delete icon
+            '</div>';
+          }
+        },
+       
+       
       ]
     });
   }

@@ -51,36 +51,12 @@ $(function () {
       columns: [
         { data: 'id' },
         { data: 'id' },
-        { data: '', // Product column
-          render: function (data, type, full, meta) {
-            return 'Drink';
-          }
-        },
-        { data: '', // Quantity column
-          render: function (data, type, full, meta) {
-            return Math.floor(Math.random() * 10)
-          }
-        },
-        { data: '', // Total column
-          render: function (data, type, full, meta) {
-            return `$${Math.floor(Math.random() * 200)}`;
-          }
-        },
-        { data: '', // Customer column
-          render: function (data, type, full, meta) {
-            return 'Voolka';
-          }
-        },
-        { data: '', // Date column
-          render: function (data, type, full, meta) {
-            return '20-05-2023';
-          }
-        },
-        { data: '', // Action column
-          render: function (data, type, full, meta) {
-            return '<button class="btn btn-danger">X</button>';
-          }
-        }
+        { data: 'product_name' }, // Product column
+        { data: 'salary' }, // Section column
+        { data: 'time' }, // Date column
+        { data: 'event' }, // Status column
+        { data: 'date' }, // Status column
+        { data: '' } // Action column
       ],
       columnDefs: [
         {
@@ -102,9 +78,71 @@ $(function () {
             selectAllRender: '<input type="checkbox" class="form-check-input">'
           },
           render: function () {
-            return '<input type="checkbox" class="dt-checkboxes form-check-input">';
+            return '<input type="checkbox" class="dt-checkboxes form-check-input" >';
           },
           searchable: false
+        },
+        {
+          // Section (Customization)
+          targets: 2,
+          responsivePriority: 5,
+          render: function (data, type, full, meta) {
+            return 'Faraz';
+
+          }
+        },
+        {
+          // Section (Customization)
+          targets: 3,
+          responsivePriority: 5,
+          render: function (data, type, full, meta) {
+            return "50000";
+
+          }
+        },
+      
+        {
+          // Date (Customization)
+          targets: 4,
+          orderable: false,
+          responsivePriority: 3,
+          render: function (data, type, full, meta) {
+            return new Date().getTime();
+          }
+        },
+        {
+          // Date (Customization)
+          targets: 5,
+          orderable: false,
+          responsivePriority: 3,
+          render: function (data, type, full, meta) {
+            return "Event";
+          }
+        },
+        {
+          // Date (Customization)
+          targets: 6,
+          orderable: false,
+          responsivePriority: 3,
+          render: function (data, type, full, meta) {
+            var randomDate = '10-2-25'; // Customize the date here
+            return '<span>' + randomDate + '</span>';
+          }
+        },
+       
+        {
+          // Actions (Customization)
+          targets: 7,
+          title: 'Actions',
+          searchable: false,
+          orderable: false,
+          render: function (data, type, full, meta) {
+            return (
+              '<div class="d-inline-block text-nowrap">' +
+              '<button>Cancel</button>' + // Edit icon
+              '</div>'
+            );
+          }
         }
       ]
     });

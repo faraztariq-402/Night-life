@@ -100,14 +100,14 @@ $(function () {
             orderable: false,
             responsivePriority: 3,
             render: function (data, type, full, meta) {
-              return '10-2-23';
+              return '5/23';
             }
           },
           {
             // For Event
             targets: 6,
             render: function (data, type, full, meta) {
-              return 'abc event';
+              return 'event..';
             }
           },
           {

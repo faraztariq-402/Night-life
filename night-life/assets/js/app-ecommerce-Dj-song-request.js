@@ -98,7 +98,7 @@ let dj = document.getElementById("dj")
           targets: 3,
           responsivePriority: 5,
           render: function (data, type, full, meta) {
-            return "It was good though";
+            return "2  Song  Requests";
 
           }
         },
@@ -109,7 +109,7 @@ let dj = document.getElementById("dj")
           orderable: false,
           responsivePriority: 3,
           render: function (data, type, full, meta) {
-            return "⭐⭐⭐";
+            return "Work on speed";
           }
         },
         
@@ -124,8 +124,8 @@ let dj = document.getElementById("dj")
           render: function (data, type, full, meta) {
             return (
               '<div class="d-inline-block text-nowrap">' +
-              '<button style="width: 2rem;">X</button>' + // Edit icon
-              '<button >Hide</button>' + // Delete icon
+              '<i class="ti ti-edit"></i>' + // Edit icon
+              '<i class="ti ti-trash"></i>' + // Delete icon
               '</div>'
             );
           }
@@ -148,21 +148,24 @@ let dj = document.getElementById("dj")
 
     dt_products.column(5).nodes().each(function (node, index, dt) {
       // You can update the Actions column content here if needed
-      $(node).html('<button>X</button><button>Hide</button>');
+      $(node).html('<div class="d-inline-block text-nowrap">' +
+      '<i class="ti ti-edit"></i>' + // Edit icon
+      '<i class="ti ti-trash"></i>' + // Delete icon
+      '</div>');
     });
   }
 
   // Listen for tab change events and update the columns
   $('#homeTab').on('click', function () {
-    updateColumns('Faraz', 'It was Amazing, excellent experience', '⭐⭐⭐');
+    updateColumns('Faraz', '3 Song Request', 'Work On Speed');
   });
 
   $('#profileTab').on('click', function () {
-    updateColumns('Saad', 'It was better', '⭐⭐');
+    updateColumns('Saad', '4 Song Request', 'Work On Performance');
   });
 
   $('#messagesTab').on('click', function () {
-    updateColumns('Ali', 'I would give 4 stars', '⭐⭐⭐⭐');
+    updateColumns('Ali', '7 Song Request', 'Work On Quality');
   });
   // Delete Record
   $('.datatables-products tbody').on('click', '.delete-record', function () {

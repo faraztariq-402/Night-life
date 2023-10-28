@@ -1,0 +1,66 @@
+.firstInputs{
+    display: flex;
+    padding-left: 1.5rem;
+    gap: 1rem;
+    padding-right: 1.5rem;
+    justify-content: space-between;
+}
+.firstInputs input{
+    height: 2.8rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: none;
+    width: 100%;
+}
+.bio{
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+.bio input{
+    border-radius: 0.5rem;
+    min-height: 7rem;
+    outline: none;
+padding-left: 0.5rem;
+    width: 100%;
+    margin-top: 1.5rem;
+  
+}
+.address{
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+.address input{
+    border-radius: 0.5rem;
+    min-height: 4rem;
+    outline: none;
+padding-left: 0.5rem;
+    width: 100%;
+    margin-top: 1.5rem;
+  
+}
+.lastItems{
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+select, input{
+    height: 2.5rem;
+width: 100%;
+border-radius: 0.5rem;
+outline: none;
+}
+.lastItems{
+    margin-top: 1.5rem;
+gap: 1rem;
+    display: flex;
+    /* width: 100%; */
+    justify-content: space-between;
+} 
+.saveButton button{
+width: 5.5rem;
+margin-top: 1rem;
+margin-right: 1.5rem;
+border-radius: 0.5rem;
+float: right;
+background-color: green;
+color: white;
+}

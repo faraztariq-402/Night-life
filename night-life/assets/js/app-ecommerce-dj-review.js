@@ -42,7 +42,9 @@ $(function () {
       0: { title: 'Out of Stock' },
       1: { title: 'In Stock' }
     };
-
+let user = document.getElementById("user")
+let promoter = document.getElementById("promoter")
+let dj = document.getElementById("dj")
   // E-commerce Products datatable
 
   if (dt_product_table.length) {
@@ -51,36 +53,11 @@ $(function () {
       columns: [
         { data: 'id' },
         { data: 'id' },
-        { data: '', // Product column
-          render: function (data, type, full, meta) {
-            return 'Drink';
-          }
-        },
-        { data: '', // Quantity column
-          render: function (data, type, full, meta) {
-            return Math.floor(Math.random() * 10)
-          }
-        },
-        { data: '', // Total column
-          render: function (data, type, full, meta) {
-            return `$${Math.floor(Math.random() * 200)}`;
-          }
-        },
-        { data: '', // Customer column
-          render: function (data, type, full, meta) {
-            return 'Voolka';
-          }
-        },
-        { data: '', // Date column
-          render: function (data, type, full, meta) {
-            return '20-05-2023';
-          }
-        },
-        { data: '', // Action column
-          render: function (data, type, full, meta) {
-            return '<button class="btn btn-danger">X</button>';
-          }
-        }
+        { data: 'product_name' }, // Product column
+        { data: 'review' }, // Section column
+        { data: 'rate' }, // Date column
+       
+        { data: '' } // Action column
       ],
       columnDefs: [
         {
@@ -102,14 +79,89 @@ $(function () {
             selectAllRender: '<input type="checkbox" class="form-check-input">'
           },
           render: function () {
-            return '<input type="checkbox" class="dt-checkboxes form-check-input">';
+            return '<input type="checkbox" class="dt-checkboxes form-check-input" >';
           },
           searchable: false
+        },
+        {
+          // Section (Customization)
+          targets: 2,
+          responsivePriority: 5,
+          render: function (data, type, full, meta) {
+            return "Faraz"
+          
+
+          }
+        },
+        {
+          // Section (Customization)
+          targets: 3,
+          responsivePriority: 5,
+          render: function (data, type, full, meta) {
+            return "It was good though";
+
+          }
+        },
+      
+        {
+          // Date (Customization)
+          targets: 4,
+          orderable: false,
+          responsivePriority: 3,
+          render: function (data, type, full, meta) {
+            return "⭐⭐⭐";
+          }
+        },
+        
+        
+       
+        {
+          // Actions (Customization)
+          targets: 5,
+          title: 'Actions',
+          searchable: false,
+          orderable: false,
+          render: function (data, type, full, meta) {
+            return (
+              '<div class="d-inline-block text-nowrap">' +
+              '<button style="width: 2rem;">X</button>' + // Edit icon
+              '<button >Hide</button>' + // Delete icon
+              '</div>'
+            );
+          }
         }
       ]
     });
   }
+  function updateColumns(name, review, rate) {
+    dt_products.column(2).nodes().each(function (node, index, dt) {
+      $(node).html(name);
+    });
 
+    dt_products.column(3).nodes().each(function (node, index, dt) {
+      $(node).html(review);
+    });
+
+    dt_products.column(4).nodes().each(function (node, index, dt) {
+      $(node).html(rate);
+    });
+
+    dt_products.column(5).nodes().each(function (node, index, dt) {
+      // You can update the Actions column content here if needed
+      $(node).html('<button>X</button><button>Hide</button>');
+    });
+  }
+
+  // Listen for tab change events and update the columns
+  $('#homeTab').on('click', function () {
+    updateColumns('Faraz', 'It was Amazing, excellent experience', '⭐⭐⭐');
+  });
+
+  $('#profileTab').on('click', function () {
+    updateColumns('Saad', 'It was better', '⭐⭐');
+  });
+
+ 
   // Delete Record
   $('.datatables-products tbody').on('click', '.delete-record', function () {
     dt_products.row($(this).parents('tr')).remove().draw();

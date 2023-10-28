@@ -88,7 +88,8 @@ let dj = document.getElementById("dj")
           targets: 2,
           responsivePriority: 5,
           render: function (data, type, full, meta) {
-            return "Faraz"
+            return '<img class="logo" src="/assets/img/NIGHTLIFE.png">';
+
           
 
           }
@@ -109,7 +110,7 @@ let dj = document.getElementById("dj")
           orderable: false,
           responsivePriority: 3,
           render: function (data, type, full, meta) {
-            return "⭐⭐⭐";
+            return "20-05-2023";
           }
         },
         
@@ -123,10 +124,10 @@ let dj = document.getElementById("dj")
           orderable: false,
           render: function (data, type, full, meta) {
             return (
-              '<div class="d-inline-block text-nowrap">' +
-              '<button style="width: 2rem;">X</button>' + // Edit icon
-              '<button >Hide</button>' + // Delete icon
-              '</div>'
+                '<div style="display: flex !important; gap: 1rem !important; " class="d-inline-block text-nowrap">' +
+                '<i class="fas fa-edit"></i> ' + 
+                '<i class="fas fa-trash-alt"></i>' +
+                '</div>'
             );
           }
         }
@@ -148,21 +149,22 @@ let dj = document.getElementById("dj")
 
     dt_products.column(5).nodes().each(function (node, index, dt) {
       // You can update the Actions column content here if needed
-      $(node).html('<button>X</button><button>Hide</button>');
+      $(node).html( '<i class="fas fa-edit"></i> ' + 
+    '<i class="fas fa-trash-alt"></i>');
     });
   }
 
   // Listen for tab change events and update the columns
   $('#homeTab').on('click', function () {
-    updateColumns('Faraz', 'It was Amazing, excellent experience', '⭐⭐⭐');
+    updateColumns('<img class="logo" src="/assets/img/NIGHTLIFE.png">', 'It was Amazing, excellent experience', '10-05-2020');
   });
 
   $('#profileTab').on('click', function () {
-    updateColumns('Saad', 'It was better', '⭐⭐');
+    updateColumns('<img class="logo" src="/assets/img/NIGHTLIFE.png">', 'It was better', '15-02-2022');
   });
 
   $('#messagesTab').on('click', function () {
-    updateColumns('Ali', 'I would give 4 stars', '⭐⭐⭐⭐');
+    updateColumns('<img class="logo" src="/assets/img/NIGHTLIFE.png">', 'I would give 4 stars', '20-10-2020');
   });
   // Delete Record
   $('.datatables-products tbody').on('click', '.delete-record', function () {
